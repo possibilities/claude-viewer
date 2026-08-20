@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+
+# Oracle frames contain real session text. They are local evidence, never fixtures.
+.oracle/
+test/oracle/*.json
+!test/oracle/.gitkeep

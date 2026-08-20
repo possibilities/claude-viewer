@@ -1,0 +1,54 @@
+{
+	"name": "claude-viewer",
+	"version": "0.1.0",
+	"description": "Faithful chromeless viewer and comparison harness for Claude Code session transcripts",
+	"type": "module",
+	"bin": {
+		"claude-viewer": "src/cli.ts"
+	},
+	"files": [
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"start": "bun run src/cli.ts",
+		"test": "bun test",
+		"typecheck": "tsc --noEmit",
+		"lint": "biome check .",
+		"format": "biome format --write .",
+		"check": "bun run lint && bun run typecheck && bun test",
+		"prepublishOnly": "bun run check"
+	},
+	"dependencies": {
+		"@xterm/headless": "5.5.0",
+		"bun-pty": "0.4.10",
+		"diff": "8.0.2",
+		"highlight.js": "11.11.1",
+		"marked": "18.0.10"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.7",
+		"@types/bun": "1.3.14",
+		"typescript": "5.9.3"
+	},
+	"engines": {
+		"bun": ">=1.3.14"
+	},
+	"keywords": [
+		"claude-code",
+		"bun",
+		"tui",
+		"transcript",
+		"viewer"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/possibilities/claude-viewer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/possibilities/claude-viewer/issues"
+	},
+	"homepage": "https://github.com/possibilities/claude-viewer#readme"
+}
