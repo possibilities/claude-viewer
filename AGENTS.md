@@ -1,5 +1,9 @@
 # Development Rules
 
+Read [CONTEXT.md](CONTEXT.md) for transcript terms and
+[ADR 0001](docs/adr/0001-independent-renderer.md) before changing the renderer
+or the read-only session boundary.
+
 - Use Bun and strict TypeScript. Rust requires a demonstrated terminal capability that Bun cannot provide.
 - The official Claude Code TUI is the rendering oracle. Do not substitute a house theme or redesign its transcript.
 - Keep the live viewer chromeless and view-only: no product header, composer, status bar, help rail, or session writes.
